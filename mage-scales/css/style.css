@@ -425,3 +425,28 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--blue-400); outlin
 .footer-contact{ display:flex; flex-wrap:wrap; gap:6px 22px; font-size:.9rem; color:var(--mist); }
 .footer-contact a:hover{ color:var(--ivory); }
 @media (max-width:1000px){ .header-phone{ display:none; } }
+
+/* ---------- Full Service package ---------- */
+.full-service{
+  position:relative; margin-top:40px; padding:clamp(26px, 4vw, 44px);
+  display:grid; grid-template-columns:1.6fr auto; gap:clamp(24px, 4vw, 56px); align-items:center;
+  border-radius:var(--radius-lg); border:1px solid rgba(91,141,255,.5);
+  background:
+    radial-gradient(80% 120% at 100% 0%, rgba(61,116,255,.28), transparent 60%),
+    linear-gradient(180deg, var(--navy-800), var(--navy-900));
+  box-shadow:0 30px 70px -35px var(--blue-glow);
+}
+.full-service-badge{
+  display:inline-block; margin-bottom:14px; padding:.35em .9em; border-radius:var(--radius-pill);
+  font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:#0b1322; background:var(--champagne);
+}
+.full-service h3{ font-size:clamp(1.7rem, 3vw, 2.4rem); color:var(--ivory); }
+.full-service p{ margin-top:14px; color:var(--mist); max-width:62ch; font-size:1.02rem; }
+.full-service-list{ display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+.full-service-list li{
+  padding:.45em .95em; border-radius:var(--radius-pill); font-size:.85rem; font-weight:600;
+  color:var(--ivory); background:rgba(61,116,255,.14); border:1px solid rgba(91,141,255,.35);
+}
+.full-service-cta{ display:flex; flex-direction:column; align-items:flex-start; gap:16px; }
+@media (max-width:860px){ .full-service{ grid-template-columns:1fr; } }
