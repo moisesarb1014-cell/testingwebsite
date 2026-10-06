@@ -66,8 +66,8 @@
   }
 
   /* ---------- Contact form ----------
-     Front-end validation only. To receive submissions, point the form at a
-     service such as Formspree or Netlify Forms (set action + method). */
+     Validates, then opens the visitor's email app with the inquiry addressed to Mage Scales. */
+  var EMAIL = 'moisesarb1014@gmail.com';
   var form = document.getElementById('contact-form');
   var status = form.querySelector('.form-status');
 
@@ -84,8 +84,19 @@
       status.textContent = 'Please fill in your name, a valid email and a message.';
       return;
     }
-    status.textContent = "Thanks! We'll be in touch within one business day.";
-    form.reset();
+    var get = function (name) { return form.elements[name].value.trim(); };
+    var subject = 'New project inquiry from ' + get('name') + (get('business') ? ' (' + get('business') + ')' : '');
+    var body = [
+      'Name: ' + get('name'),
+      'Email: ' + get('email'),
+      'Business: ' + (get('business') || '-'),
+      'Phone: ' + (get('phone') || '-'),
+      'Interested in: ' + get('service'),
+      '',
+      get('message')
+    ].join('\n');
+    window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    status.textContent = 'Opening your email app… If nothing happens, email us at ' + EMAIL + ' or call (832) 244-2224.';
   });
 
   /* ---------- Footer year ---------- */

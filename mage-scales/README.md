@@ -13,10 +13,15 @@ or serve locally with `python3 -m http.server` from this folder.
 ## Sections
 Hero (rotating seal) · Services · Work · The Ascent (3-step process) · Testimonials · Founder · Contact
 
-## Before launch
-- **Work** – projects link to the live Base44 sites. To show real screenshots, place an `<img>` inside
-  each `.site-preview` (it covers the styled preview automatically).
+## Live site
+Published on Base44: https://mage-scales-4526064f.base44.app (Base44 app "Mage Scales").
+
+## Contact details on the site
+- Phone: (832) 244-2224
+- Email: moisesarb1014@gmail.com
+- Google Business Profile: linked in Testimonials and Contact
+
+## Still to add
+- **Work** – to show real screenshots, place an `<img>` inside each `.site-preview`.
 - **Testimonials** – client businesses are real; quote text and owner names are placeholders.
-- **Founder** – add the owner's name, photo and bio.
-- **Contact** – update the email and connect the form to a service (Formspree, Netlify Forms, etc.).
-- **Book a Call** buttons – point them at your Calendly (or similar) link.
+- **Founders** – add a photo of Moises and Gage.

@@ -17,8 +17,8 @@
   --blue-glow:rgba(61,116,255,.32);
 
   --ivory:#f2eee6;
-  --mist:#a7b1c6;
-  --faint:#6b7690;
+  --mist:#c5ccda;
+  --faint:#9aa5bd;
   --champagne:#cdb27a;
 
   --line:rgba(167,190,255,.12);
@@ -53,7 +53,7 @@ p{ margin:0; }
 button,input,select,textarea{ font:inherit; color:inherit; }
 
 .container{ width:100%; max-width:var(--container); margin:0 auto; padding:0 var(--gutter); position:relative; z-index:1; }
-.text-blue{ color:var(--blue-400); }
+.text-blue{ color:#86abff; }
 
 .eyebrow{
   display:inline-flex; align-items:center; gap:14px;
@@ -417,3 +417,11 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--blue-400); outlin
   .js .reveal{ opacity:1; transform:none; transition:none; }
   *{ transition-duration:.01ms !important; }
 }
+
+/* ---------- Contact details ---------- */
+.header-phone{ font-size:.9rem; font-weight:600; color:var(--ivory); white-space:nowrap; transition:color .2s; }
+.header-phone:hover{ color:var(--blue-300); }
+.gbp-row{ display:flex; justify-content:center; margin-top:32px; }
+.footer-contact{ display:flex; flex-wrap:wrap; gap:6px 22px; font-size:.9rem; color:var(--mist); }
+.footer-contact a:hover{ color:var(--ivory); }
+@media (max-width:1000px){ .header-phone{ display:none; } }
